@@ -3,6 +3,7 @@
 A specialized AI-powered assistant designed for the construction industry.
 It answers construction-related questions and can optionally reference uploaded documents (PDF, DOCX, TXT) using a RAG (Retrieval-Augmented Generation) pipeline with FAISS and Groq LLMs.
 
+
 🚀 Features
 
 ✅ Construction-focused – answers only construction-related queries
@@ -21,16 +22,18 @@ It answers construction-related questions and can optionally reference uploaded 
 
 🛠️ Configurable parameters – chunk size, overlap, Groq API key
 
+
 📂 Project Structure
 construction-ai-assistant/
 │-- app.py                 # Main Streamlit app
 │-- requirements.txt       # Dependencies
 │-- README.md              # Documentation
 
+
 🔧 Installation
 1. Clone the repository
-git clone https://github.com/your-username/construction-ai-assistant.git
-cd construction-ai-assistant
+git clone (https://github.com/ASREETHASREEJA5/construction-chatbot)
+cd chatbot
 
 2. Create virtual environment (recommended)
 python -m venv venv
@@ -39,6 +42,8 @@ venv\Scripts\activate      # Windows
 
 3. Install dependencies
 pip install -r requirements.txt
+
+
 
 🔑 Setup
 
@@ -52,6 +57,8 @@ streamlit run app.py
 
 Enter your Groq API Key in the sidebar.
 
+
+
 💡 Example Questions
 
 What are the standard concrete mix ratios for different strength requirements?
@@ -62,10 +69,14 @@ What are the key factors in construction project cost estimation?
 
 Explain the difference between various foundation types and when to use each.
 
+
+
 📄 Document Upload
 
 You can upload reference documents in TXT, PDF, DOCX formats.
 These documents are chunked, embedded, and stored in FAISS for retrieval during Q&A.
+
+
 
 💬 Chat History
 
@@ -83,6 +94,8 @@ Assistant: Provides answer based on the previous context.
 
 The history is stored in Streamlit session state, and you can clear it anytime using the sidebar button.
 
+
+
 📊 System Flow (Architecture)
 
 Here’s how the assistant processes your query:
@@ -98,6 +111,8 @@ flowchart TD
     H --> I[Final Construction-Specific Answer]
     I --> J[Displayed in Streamlit UI]
 
+
+
 ⚙️ Parameters
 
 Chunk Size – default 500 tokens
@@ -105,6 +120,8 @@ Chunk Size – default 500 tokens
 Overlap – default 50 tokens
 
 These can be adjusted in the sidebar.
+
+
 
 🛠️ Tech Stack
 
